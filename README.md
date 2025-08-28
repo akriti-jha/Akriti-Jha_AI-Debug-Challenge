@@ -93,9 +93,9 @@ uvicorn main:app --reload
 ## API Documentation
 
 ### 1. Health Check  
-- **Method**: `GET`  
-- **Endpoint**: `/`  
-- **Response**:  
+- Method: `GET`  
+- Endpoint: `/`  
+- Response:  
 ```
 {
   "message": "Financial Document Analyzer API is running"
@@ -103,13 +103,13 @@ uvicorn main:app --reload
 ```
 
 ### 2. Analyze Document  
-- **Method**: `POST`  
-- **Endpoint**: `/analyze`  
-- **Description**: Accepts PDF file and optional query string input.  
-- **Request Form Data**:  
+- Method: `POST`  
+- Endpoint: `/analyze`  
+- Description: Accepts PDF file and optional query string input.  
+- Request Form Data:  
   - `file`: Binary PDF file upload  
   - `query`: String (optional) query or instruction  
-- **Response**:  
+- Response:  
 ```
 {
   "task_id": "unique-task-id-string"
@@ -117,10 +117,10 @@ uvicorn main:app --reload
 ```
 
 ### 3. Task Status  
-- **Method**: `GET`  
-- **Endpoint**: `/status/{task_id}`  
-- **Description**: Check the processing status and result of an analysis task.  
-- **Responses**:  
+- Method: `GET`  
+- Endpoint: `/status/{task_id}`  
+- Description: Check the processing status and result of an analysis task.  
+- Responses:  
   - Pending/Started:  
     ```
     {"status": "Pending"}
@@ -144,7 +144,7 @@ uvicorn main:app --reload
 
 ## Example Usage
 
-**Upload and Analyze PDF:**  
+Upload and Analyze PDF:
 ```
 curl -X POST "http://localhost:8000/analyze" -F "file=@data/sample.pdf" -F "query=Analyze Q2 2025 financials"
 ```
@@ -153,7 +153,7 @@ Response:
 {"task_id": "c8aefe70-1abd-4a8c-a8af-d5c01abc1234"}
 ```
 
-**Poll Task Status:**  
+Poll Task Status: 
 ```
 curl "http://localhost:8000/status/c8aefe70-1abd-4a8c-a8af-d5c01abc1234"
 ```
@@ -173,13 +173,9 @@ Response when complete:
 - Persistent storage of uploaded files and analysis results using **PostgreSQL** with async ORM.  
 - API design supports scalability and client-friendly polling of long-running tasks.
 
----
-
 ## Notes
 
 - Replace all placeholder LLM initialization with your actual language model API or library.  
 - Ensure Redis and PostgreSQL configurations are secure and adapted to your production environment if applicable.  
 - The AI-generated advice is fictional and for demonstration purposes only; real investments require qualified human advice.
-
----
 
