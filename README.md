@@ -183,12 +183,3 @@ Response when complete:
 
 ---
 
-**Happy Debugging and Best of Luck with the Internship!**
-
-[1](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/26063764/3e9cf8c3-93fd-4d19-b444-0d19f073b7a6/AI-Internship-Assignment-Debug-Challenge.pdf)
-[2](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/26063764/23e8ad2f-2e56-4bb5-89e0-af1c57c85f6c/agents.py)
-[3](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/26063764/30aa7d77-7193-4e3e-a993-365814b438cd/main.py)
-[4](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/26063764/5369e960-214f-4da1-8d51-2604a3eefd91/README.md)
-[5](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/26063764/39bbb433-ed64-49fd-9c6c-401dc1f44f9f/requirements.txt)
-[6](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/26063764/2fbea6fa-913c-4597-89f5-dc21d1af2b53/task.py)
-[7](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/26063764/881de08c-e514-4525-aa8a-7a03ed32c314/tools.py)
