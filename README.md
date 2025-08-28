@@ -8,33 +8,33 @@ This project is an AI-powered Financial Document Analyzer designed to process co
 
 ## Bugs Found and Fixes
 
-Throughout the codebase, *deterministic bugs* and *inefficient prompts* were identified and fixed to make the system functional and reliable:
+Throughout the codebase, deterministic bugs and inefficient prompts were identified and fixed to make the system functional and reliable:
 
-- **Agent Initialization and LLM Setup**:  
+- Agent Initialization and LLM Setup:  
   - Bug: The language model (`llm`) was uninitialized (`llm = llm`), resulting in runtime errors.  
   - Fix: Proper initialization or import of the LLM instance was required before agent creation.
 
-- **Agent Configuration Errors**:  
+- Agent Configuration Errors:  
   - Bug: Incorrect use of parameters such as `tool` instead of `tools` in `Agent` instantiation.  
   - Fix: Changed `tool` to `tools` (list) for compatibility and correct functioning.
 
-- **Unprofessional & Contradictory Prompts**:  
+- Unprofessional & Contradictory Prompts:  
   - Bug: Agents and tasks had misleading or confusing prompt/backstory texts causing unpredictable AI output.  
   - Fix: Rewrote prompts to be clear, professional, and focused on genuine financial analysis.
 
-- **PDF Reading Implementation**:  
+- PDF Reading Implementation:  
   - Bug: The `tools.py` PDF reader used an undefined `Pdf` class without proper import or implementation.  
   - Fix: Replaced with a functional PDF reading method using the `PyPDF2` library, carefully extracting and cleaning text.
 
-- **API Handling Bugs**:  
+- API Handling Bugs:  
   - Bug: In `main.py`, the API upload function had missing exception handling, incorrect async file handling, and misconfigured Crew kickoff parameters.  
   - Fix: Added proper error catching, file directory checks, and corrected synchronous/asynchronous handling. Confirmed Crew API calls correctly use passed parameters.
 
-- **Concurrency and Storage**:  
-  - Added a **Celery + Redis** queue worker system for scalable asynchronous processing of financial analysis tasks.  
-  - Integrated a **PostgreSQL database with SQLAlchemy and async libraries** to persist uploaded document metadata and analysis results.
+- Concurrency and Storage:  
+  - Added a Celery + Redis queue worker system for scalable asynchronous processing of financial analysis tasks.  
+  - Integrated a PostgreSQL database with SQLAlchemy and async libraries** to persist uploaded document metadata and analysis results.
 
-- **Miscellaneous**:  
+- Miscellaneous:  
   - Added file cleanup on all exit paths to avoid clutter and potential data leaks.  
   - Refined API responses to improve client usability and error transparency.
 
